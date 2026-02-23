@@ -1,0 +1,117 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+.modalDialog {
+  background-color: #fff;
+  border-radius: 16px;
+  width: 500px; /* Adjust as needed */
+  max-width: 90%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 0; /* Updated from original */
+}
+
+.modalTitle {
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1e4d5a;
+}
+
+.btnClose {
+  padding: 0.5rem;
+  margin: -0.5rem -0.5rem -0.5rem auto;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0.25rem;
+  opacity: 0.5;
+}
+
+.modalBody {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+.starRating {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse; /* For RTL star display */
+  margin: 1rem 0;
+  unicode-bidi: unset;
+  direction: ltr;
+}
+
+.starRating input {
+  display: none;
+}
+
+.starRating label {
+  font-size: 2.5rem;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0 0.1rem;
+}
+
+.starRating input:checked ~ label {
+  color: #ffc107;
+}
+
+.starRating label:hover,
+.starRating label:hover ~ label {
+  color: #ffc107;
+}
+
+.formControl {
+  width: calc(100% - 2rem);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  resize: vertical;
+  font-size: 1rem;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+}
+
+.btnSubmit {
+  background-color: #1e4d5a;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btnSubmit:hover {
+  background-color: #0c333e;
+}

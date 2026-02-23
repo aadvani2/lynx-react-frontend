@@ -1,0 +1,195 @@
+.stepTwoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.stepTwoPanel {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative; /* Add position relative */
+  z-index: 1; /* Set z-index */
+}
+
+.stepTwoHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.stepTwoTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1e4d5a;
+}
+
+.stepTwoSubtitle {
+  font-size: 14px;
+  color: #706f6f;
+}
+
+.addAddressButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.addAddressButton {
+  background: none;
+  border: 1px solid #1e4d5a;
+  color: #1e4d5a;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.addAddressButton:hover {
+  background-color: #1e4d5a;
+  color: #ffffff;
+}
+
+.addressList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.addressCard {
+  background-color: #ffffff;
+  border: 1px solid #e3e6ea;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.addressCard:hover {
+  border-color: #b0b0b0;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.addressCardSelected {
+  border-color: #1e4d5a;
+  background-color: rgba(30, 77, 90, 0.05);
+}
+
+.addressCardContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addressText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.fullAddress {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1e4d5a;
+  line-height: 1.4;
+}
+
+.addressLabel {
+  font-size: 12px;
+  color: #706f6f;
+  background-color: #f0f4f8;
+  padding: 2px 8px;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+
+.addressActions {
+  display: flex;
+  gap: 8px;
+}
+
+.addressActionBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #706f6f;
+}
+
+.addressActionBtn:hover {
+  color: #1e4d5a;
+}
+
+.addressSelectedChip {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #b5dcb7; /* Green tint */
+  color: #1e4d5a;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  border: 1px dashed #e3e6ea;
+}
+
+.emptyStateIcon {
+  width: 50px;
+  height: 50px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+}
+
+.emptyStateTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e4d5a;
+}
+
+.emptyStateSubtitle {
+  font-size: 13px;
+  color: #706f6f;
+  max-width: 300px;
+}
+
+.emptyStateButton {
+  margin-top: 10px;
+  background: #1e4d5a;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s ease;
+}
+
+.emptyStateButton:hover {
+  opacity: 0.9;
+}

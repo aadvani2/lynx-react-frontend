@@ -1,0 +1,243 @@
+.how-it-works {
+  padding: 64px 0 96px;
+  background: #FFFFFF;
+}
+
+.how-it-works__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 132px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+}
+
+.how-it-works__title {
+  font: 700 36px/46.8px "Bricolage Grotesque", system-ui, sans-serif;
+  color: var(--color-primary);
+  text-align: center;
+  margin: 0;
+}
+
+.how-it-works__steps {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  align-self: stretch;
+  flex-wrap: nowrap;
+}
+
+/* Step Card */
+.step-card {
+  flex: 1 1 0;
+  width: 100%;
+  max-width: 300px;
+  height: 320px;
+  padding: 40px 24px;
+  background: #C8E9EF;
+  box-shadow: 0px 1px 3px rgba(39, 39, 39, 0.05);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  transition: all var(--transition-base);
+}
+
+.step-card:hover {
+  box-shadow: 0px 4px 8px rgba(39, 39, 39, 0.12);
+  /* transform: translateY(-4px); */
+}
+
+.step-card__icon {
+  width: 64px;
+  height: 64px;
+  padding: 12px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.step-card__icon-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.step-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.step-card__title {
+  font-family: 'Bricolage Grotesque', var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #1E4D5A;
+  margin: 0;
+}
+
+.step-card__description {
+  font-family: 'Bricolage Grotesque', var(--font-display);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #1E4D5A;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .how-it-works__container {
+    padding: 0 64px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .how-it-works__container {
+    padding: 0 48px;
+  }
+
+  .how-it-works__steps {
+    gap: 20px;
+  }
+
+  .step-card {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .how-it-works__container {
+    padding: 0 32px;
+  }
+
+  .how-it-works__title {
+    font: 700 32px/42px "Bricolage Grotesque", system-ui, sans-serif;
+  }
+
+  .how-it-works__steps {
+    flex-wrap: wrap;
+  }
+
+  .step-card {
+    flex: 1 1 calc(50% - 12px);
+    max-width: none;
+    min-width: 240px;
+    height: 280px;
+    padding: 32px 20px;
+  }
+
+  .step-card__title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .step-card__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works {
+    padding: 48px 0 72px;
+  }
+
+  .how-it-works__container {
+    padding: 0 24px;
+    gap: 32px;
+  }
+
+  .how-it-works__title {
+    font: 700 28px/36px "Bricolage Grotesque", system-ui, sans-serif;
+  }
+
+  .how-it-works__steps {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .step-card {
+    flex: 1 1 auto;
+    max-width: none;
+    width: 100%;
+    height: auto;
+    min-height: 240px;
+    padding: 28px 20px;
+  }
+
+  .step-card__icon {
+    width: 56px;
+    height: 56px;
+    padding: 10px;
+  }
+
+  .step-card__title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .step-card__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-it-works {
+    padding: 40px 0 64px;
+  }
+
+  .how-it-works__container {
+    padding: 0 16px;
+  }
+
+  .how-it-works__title {
+    font: 700 24px/32px "Bricolage Grotesque", system-ui, sans-serif;
+  }
+
+  .step-card {
+    height: auto;
+    min-height: 220px;
+    padding: 24px 16px;
+  }
+
+  .step-card__icon {
+    width: 52px;
+    height: 52px;
+    padding: 8px;
+  }
+
+  .step-card__title {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .step-card__description {
+    font-size: 13px;
+    line-height: 19px;
+  }
+}
+
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .step-card {
+    transition: none;
+  }
+  
+  .step-card:hover {
+    transform: none;
+  }
+}

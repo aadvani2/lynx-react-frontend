@@ -1,0 +1,9 @@
+.cardImgTop {
+  min-height: 200px;
+}
+
+.blogPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

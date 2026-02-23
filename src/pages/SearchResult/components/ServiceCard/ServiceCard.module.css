@@ -1,0 +1,374 @@
+/* Service Card - Responsive Layout with Clean Hierarchy */
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0px 1px 3px rgba(39, 39, 39, 0.05);
+  padding: 24px;
+  width: 100%;
+  transition: box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.serviceCard:hover {
+  box-shadow: 0px 4px 12px rgba(39, 39, 39, 0.1);
+}
+
+/* Header Section - Image */
+.serviceImg {
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+/* Right Section Container - Wraps info and button */
+.serviceRightSection {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Content Section - Info */
+.serviceInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Title Section */
+.serviceTitle {
+  color: #1E4D5A;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Bricolage Grotesque';
+  line-height: 1.2;
+  word-wrap: break-word;
+  margin: 0 0 4px 0;
+}
+
+/* Meta Information Rows */
+.serviceMetaRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 15px;
+  color: #1E4D5A;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.serviceMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.serviceIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.serviceReviews {
+  color: #706F6F;
+  font-weight: 400;
+}
+
+/* Description Section */
+.serviceDesc {
+  color: #706F6F;
+  font-family: 'Poppins';
+  font-size: 15px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.serviceMore {
+  font-weight: 600;
+  color: #706F6F;
+}
+
+/* Action Section - CTA Button */
+.serviceBtn {
+  background: #F7EF6F;
+  color: #1E4D5A;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'Bricolage Grotesque';
+  border: none;
+  border-radius: 16px;
+  padding: 14px 24px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 16px;
+  box-shadow: 0px 1px 3px rgba(39, 39, 39, 0.05);
+  transition: background 0.2s, transform 0.1s;
+  box-sizing: border-box;
+  align-self: flex-start;
+}
+
+.serviceBtn:hover {
+  background: #F5E85A;
+  transform: translateY(-1px);
+}
+
+.serviceBtn:active {
+  transform: translateY(0);
+}
+
+/* Tablet: 2-column layout, vertical cards */
+@media (min-width: 640px) and (max-width: 899px) {
+  .serviceCard {
+    flex-direction: column;
+    padding: 18px;
+  }
+  
+  .serviceImg {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 12px;
+  }
+  
+  .serviceRightSection {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .serviceInfo {
+    flex: 1;
+    min-width: 0;
+    gap: 6px;
+  }
+  
+  .serviceBtn {
+    width: 100%;
+    margin-top: 12px;
+  }
+  
+  .serviceTitle {
+    font-size: 19px;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  
+  .serviceDesc {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .serviceMetaRow {
+    gap: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Large screens (900px-1399px): 3-column layout, vertical cards with better spacing */
+@media (min-width: 900px) and (max-width: 1399px) {
+  .serviceCard {
+    padding: 20px;
+  }
+  
+  .serviceImg {
+    height: 200px;
+    margin-bottom: 14px;
+  }
+  
+  .serviceTitle {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  
+  .serviceDesc {
+    font-size: 14px;
+  }
+  
+  .serviceMetaRow {
+    gap: 12px;
+    font-size: 14px;
+  }
+  
+  .serviceBtn {
+    margin-top: 14px;
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+}
+
+/* Extra large screens (1400px+): Horizontal layout - Image left, Text+Button right */
+@media (min-width: 1400px) {
+  .serviceCard {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+  }
+  
+  .serviceImg {
+    width: 160px;
+    min-width: 160px;
+    height: 160px;
+    margin-bottom: 0;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+  
+  .serviceRightSection {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    justify-content: space-between;
+  }
+  
+  .serviceInfo {
+    flex: 1;
+    min-width: 0;
+    gap: 6px;
+  }
+  
+  .serviceBtn {
+    width: 100%;
+    margin-top: 16px;
+    align-self: flex-start;
+  }
+  
+  .serviceTitle {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  
+  .serviceDesc {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  .serviceMetaRow {
+    gap: 20px;
+  }
+}
+
+
+/* Very small mobile: Single column, compact */
+@media (max-width: 479px) {
+  .serviceCard {
+    padding: 16px;
+  }
+  
+  .serviceImg {
+    height: 160px;
+    margin-bottom: 10px;
+  }
+  
+  .serviceInfo {
+    gap: 6px;
+  }
+  
+  .serviceTitle {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  
+  .serviceMetaRow {
+    gap: 10px;
+    font-size: 13px;
+  }
+  
+  .serviceDesc {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  .serviceIcon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .serviceBtn {
+    font-size: 15px;
+    padding: 10px 16px;
+    margin-top: 10px;
+  }
+}
+
+/* Small mobile: 2-column layout, compact cards */
+@media (min-width: 480px) and (max-width: 639px) {
+  .serviceCard {
+    padding: 16px;
+  }
+  
+  .serviceImg {
+    height: 160px;
+    margin-bottom: 10px;
+  }
+  
+  .serviceInfo {
+    gap: 6px;
+  }
+  
+  .serviceTitle {
+    font-size: 18px;
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+  
+  .serviceMetaRow {
+    gap: 8px;
+    font-size: 13px;
+  }
+  
+  .serviceDesc {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  .serviceIcon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .serviceBtn {
+    font-size: 15px;
+    padding: 10px 16px;
+    margin-top: 10px;
+  }
+}
+
+/* Small mobile: Compact spacing */
+@media (max-width: 640px) {
+  .serviceCard {
+    padding: 16px;
+  }
+  
+  .serviceImg {
+    height: 160px;
+    margin-bottom: 10px;
+  }
+  
+  .serviceInfo {
+    gap: 6px;
+  }
+  
+  .serviceTitle {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  
+  .serviceBtn {
+    font-size: 16px;
+    padding: 12px 16px;
+    margin-top: 10px;
+  }
+}
+

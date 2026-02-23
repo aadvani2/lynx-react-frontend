@@ -1,0 +1,160 @@
+.dropdownHeading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px; /* Adjusted for desired appearance */
+  line-height: 130%; /* Equivalent to ~23.4px for 18px font-size, matches Figma */
+  letter-spacing: -0.02em; /* Added letter-spacing */
+  color: var(--color-primary, #1E4D5A); /* Use CSS variable for color */
+  margin-bottom: 12px; /* Spacing below heading */
+  cursor: pointer; /* Indicate clickable */
+  transition: color 0.2s ease;
+}
+
+.dropdownHeading:hover {
+  color: var(--color-accent, #FFC72C); /* Hover effect */
+}
+
+.highlight {
+  margin-top: 20px;
+}
+
+.services-col ul {
+  list-style-type: none !important; /* Force remove bullet points due to specificity */
+  padding: 0;
+  margin: 0;
+}
+
+.services-col li {
+  font-family: var(--font-display); /* Ensure consistent theme font */
+  font-size: 14px;
+  line-height: 20px;
+  color: #333; /* Dark grey, matching Figma's nearly-black text */
+  padding: 4px 0;
+  cursor: pointer; /* Ensure pointer cursor */
+  transition: transform 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.services-col li:hover {
+  transform: translateX(4px);
+  color: var(--color-accent, #FFC72C); /* Keep hover color as accent */
+}
+
+.servicesCol {
+  /* you can keep this simple; layout is mostly from the outer container */
+  max-width: 100%;
+}
+
+/* list styles must be nested under .servicesCol */
+.servicesCol ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.servicesCol li {
+  font-family: var(--font-display);
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  padding: 4px 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.servicesCol li:hover {
+  transform: translateX(4px);
+  color: var(--color-accent, #FFC72C);
+}
+
+/* Container & layout (moved from header) */
+.servicesDropdown {
+  position: fixed;
+  top: var(--header-height, 80px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1440px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 1045;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.servicesDropdownCard {
+  background: #FFFFFF;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px;
+  box-sizing: border-box;
+  position: relative;
+  border-bottom: 2px solid var(--color-teal-dark, #1e4d5a);
+  border-left: 2px solid var(--color-teal-dark, #1e4d5a);
+  border-right: 2px solid var(--color-teal-dark, #1e4d5a);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.servicesDropdownInner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.servicesCol {
+  flex: 1 1 220px;
+  min-width: 200px;
+  box-sizing: border-box;
+}
+
+.stuck {
+  top: var(--stuck-header-height, 56px);
+}
+
+@media (max-width: 991.98px) {
+  .servicesDropdown {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+  .servicesDropdownCard {
+    padding: 24px;
+    max-width: 90vw;
+  }
+
+  .servicesDropdownInner {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .servicesCol {
+    flex: 1 1 220px;
+    min-width: 220px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .servicesDropdownCard {
+    max-width: 1440px;
+    padding: 40px;
+  }
+}

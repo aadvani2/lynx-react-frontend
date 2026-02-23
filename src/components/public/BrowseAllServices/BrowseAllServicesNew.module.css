@@ -1,0 +1,399 @@
+
+.browseAllServicesParent {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 96px 132px 64px;
+	box-sizing: border-box;
+	gap: 48px;
+	text-align: center;
+	font-size: 36px;
+	color: #1e4d5a;
+	font-family: 'Bricolage Grotesque', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.browseAllServices {
+	align-self: stretch;
+	position: relative;
+	letter-spacing: -0.02em;
+	line-height: 130%;
+}
+
+.frameWrapper {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: left;
+	font-size: 20px;
+}
+
+.frameParent {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+}
+
+.frameGroup {
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.indoorWrapper {
+	border-radius: 16px;
+	background-color: #1e4d5a;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 16px;
+	color: #fff;
+	font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+	cursor: pointer;
+}
+
+.indoor {
+	position: relative;
+	letter-spacing: -0.02em;
+	line-height: 130%;
+	font-weight: 500;
+}
+
+.tag {
+	border-radius: 16px;
+	border: 2px solid #c8e9ef;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 16px;
+	font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+	cursor: pointer;
+	transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.tag:hover {
+	background-color: rgba(30, 77, 90, 0.05);
+}
+
+.frameContainer {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.browseServicesdefaultParent {
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	align-content: center;
+	gap: 24px;
+	justify-content: center;
+}
+
+.browseServicesdefault {
+	width: 276px;
+	box-shadow: 0px 2px 4px rgba(39, 39, 39, 0.1);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	text-decoration: none;
+	color: inherit;
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.browseServicesdefault:hover {
+	transform: translateY(-2px);
+	box-shadow: 0px 6px 12px rgba(30, 77, 90, 0.15);
+}
+
+.browseServicesdefaultChild {
+	align-self: stretch;
+	height: 200px;
+	position: relative;
+	border-radius: 16px 16px 0px 0px;
+	max-width: 100%;
+	overflow: hidden;
+	flex-shrink: 0;
+	object-fit: cover;
+	background: #D9D9D9;
+	display: block;
+}
+
+.plumbingParent {
+	align-self: stretch;
+	border-radius: 0px 0px 16px 16px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 12px 16px;
+	box-sizing: border-box;
+	gap: 2px;
+	min-height: 130px;
+}
+
+.installationRepairUpgradesWrapper {
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	color: #706f6f;
+}
+
+.installationRepairUpgrades {
+	flex: 1;
+	position: relative;
+	line-height: 26px;
+	font-weight: 500;
+}
+
+.imageContainer {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	border-radius: 16px 16px 0px 0px;
+	background-color: #D9D9D9;
+}
+
+/* Loading shimmer animation for images */
+@keyframes shimmer {
+	0% {
+		background-position: -200% 0;
+	}
+	100% {
+		background-position: 200% 0;
+	}
+}
+
+.shimmerPlaceholder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0);
+	background-size: 200% 100%;
+	animation: shimmer 1.5s infinite;
+	z-index: 0;
+}
+
+.hidePlaceholder {
+	opacity: 0;
+}
+
+.browseServicesdefaultChild {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+	.browseAllServicesParent {
+		padding: 80px 64px 56px;
+	}
+	
+	.browseAllServices {
+		font-size: 34px;
+	}
+	
+	.frameParent {
+		font-size: 19px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.browseAllServicesParent {
+		padding: 72px 48px 52px;
+		gap: 40px;
+	}
+	
+	.browseAllServices {
+		font-size: 32px;
+	}
+	
+	.frameWrapper,
+	.frameParent {
+		font-size: 19px;
+	}
+	
+	.browseServicesdefault {
+		width: 260px;
+	}
+	
+	.browseServicesdefaultChild,
+	.imageContainer {
+		height: 180px;
+	}
+	
+	.plumbingParent {
+		min-height: 120px;
+	}
+}
+
+@media (max-width: 900px) {
+	.browseAllServicesParent {
+		padding: 64px 32px 48px;
+		gap: 36px;
+	}
+	
+	.browseAllServices {
+		font-size: 30px;
+	}
+	
+	.frameWrapper,
+	.frameParent {
+		font-size: 18px;
+		gap: 20px;
+	}
+	
+	.browseServicesdefaultParent {
+		gap: 20px;
+	}
+	
+	.browseServicesdefault {
+		width: 100%;
+		max-width: 320px;
+	}
+}
+
+@media (max-width: 640px) {
+	.browseAllServicesParent {
+		padding: 56px 24px 44px;
+		gap: 32px;
+	}
+	
+	.browseAllServices {
+		font-size: 28px;
+	}
+	
+	.frameGroup {
+		gap: 10px;
+	}
+	
+	.indoorWrapper,
+	.tag {
+		padding: 7px 14px;
+		border-width: 1.5px;
+	}
+	
+	.indoor {
+		font-size: 17px;
+	}
+	
+	.frameWrapper,
+	.frameParent {
+		font-size: 17px;
+	}
+	
+	.browseServicesdefault {
+		width: 100%;
+		max-width: 400px;
+	}
+	
+	.browseServicesdefaultChild,
+	.imageContainer {
+		height: 200px;
+	}
+	
+	.plumbingParent {
+		padding: 10px 14px;
+	}
+	
+	.installationRepairUpgradesWrapper {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 480px) {
+	.browseAllServicesParent {
+		padding: 48px 16px 40px;
+		gap: 28px;
+	}
+	
+	.browseAllServices {
+		font-size: 26px;
+	}
+	
+	.frameGroup {
+		gap: 8px;
+	}
+	
+	.indoorWrapper,
+	.tag {
+		padding: 6px 12px;
+	}
+	
+	.indoor {
+		font-size: 16px;
+	}
+	
+	.frameWrapper,
+	.frameParent {
+		font-size: 16px;
+		gap: 18px;
+	}
+	
+	.browseServicesdefaultParent {
+		gap: 16px;
+	}
+	
+	.browseServicesdefault {
+		max-width: 100%;
+	}
+	
+	.browseServicesdefaultChild,
+	.imageContainer {
+		height: 180px;
+	}
+	
+	.plumbingParent {
+		padding: 10px 12px;
+		min-height: 110px;
+	}
+	
+	.installationRepairUpgradesWrapper {
+		font-size: 14px;
+	}
+	
+	.installationRepairUpgrades {
+		line-height: 22px;
+	}
+}
+
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+	.tag,
+	.browseServicesdefault {
+		transition: none;
+	}
+	
+	.browseServicesdefault:hover {
+		transform: none;
+	}
+	
+	.shimmerPlaceholder {
+		animation: none;
+	}
+}
+
+.twoLineEllipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 52px; /* Adjust based on line-height and number of lines */
+  line-height: 26px;
+}

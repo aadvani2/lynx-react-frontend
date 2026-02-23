@@ -1,0 +1,165 @@
+:root{
+  --teal: #1E4D5A;
+  --yellow: #F7EF6F;
+  --white: #FFFFFF;
+  --light-blue: #C8E9EF;
+  --text: #000000;
+}
+
+/* Hero container */
+.hero{
+  width: 100%;
+  background: var(--teal);
+  padding: 96px 132px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+/* Trust badge */
+.hero__trust{ display:inline-flex; align-items:center; gap:8px; }
+.hero__stars{ display:flex; gap:4px; }
+.hero__trust-text{
+  color:#fff; font-family:"Bricolage Grotesque", system-ui, sans-serif;
+  font-size:16px; font-weight:400; line-height:26px;
+}
+
+/* Heading */
+.hero__title{
+  margin: 0;
+  color: var(--yellow);
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+/* Subline */
+.hero__subline{
+  display:inline-flex; align-items:center; gap:8px;
+  color:#fff; font-family:"Bricolage Grotesque", system-ui, sans-serif;
+  font-size:16px; font-weight:400; line-height:26px;
+}
+.hero__badge{ display:inline-flex; }
+.hero__checkmark{
+  filter: brightness(0) saturate(100%) invert(95%) sepia(46%) saturate(1477%) hue-rotate(351deg) brightness(103%) contrast(94%);
+}
+
+/* Search row: bar + button */
+.hero__search{
+  display:flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 24px;
+  /* gap: 16px; */
+}
+
+.hero__tabs{
+  display: inline-flex;
+  background: rgba(255,255,255,0.12);
+  padding: 4px;
+  border-radius: 999px;
+  gap: 4px;
+}
+
+.hero__tab{
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font: 600 15px/1 "Bricolage Grotesque", system-ui, sans-serif;
+  color: rgba(255,255,255,0.8);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.hero__tab--active{
+  background: #ffffff;
+  color: #1e4d5a;
+}
+
+.hero__search-panel{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+  overflow: visible; /* allow dropdowns from child inputs to render */
+}
+
+.hero__search-panel > *{
+  width: 100%;
+}
+
+/* Popular services */
+.hero__popular{ display:flex; flex-direction:column; align-items:center; gap:8px; }
+.hero__popular-title{
+  color: var(--yellow);
+  font: 700 16px/26px "Bricolage Grotesque", system-ui, sans-serif;
+}
+.hero__chips{ display:flex; flex-wrap:wrap; gap:8px; }
+.chip{
+  padding: 4px 16px;
+  background: var(--light-blue);
+  border-radius:16px;
+  color: var(--teal);
+  font: 500 14px/20px "Poppins", system-ui, sans-serif;
+  transition: all 0.2s ease;
+}
+.chip:hover{
+  background: var(--teal);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(30, 77, 90, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1200px){
+  .hero{ padding: 80px 64px; }
+  .hero__title{ font-size: 52px; line-height: 68px; }
+}
+
+@media (max-width: 1024px){
+  .hero{ padding: 72px 48px; }
+  .hero__title{ font-size: 48px; line-height: 62px; }
+}
+
+@media (max-width: 900px){
+  .hero{ padding: 64px 32px; }
+  .hero__title{ font-size: 42px; line-height: 54px; }
+  .hero__chips{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px){
+  .hero{ padding: 56px 20px; }
+  .hero__title{ font-size: 36px; line-height: 46px; }
+  .hero__trust-text{ font-size: 14px; line-height: 22px; }
+  .hero__subline{ font-size: 14px; line-height: 22px; flex-wrap: wrap; justify-content: center; }
+  .chip{
+    font-size: 13px;
+    padding: 4px 12px;
+  }
+}
+
+@media (max-width: 600px){
+  .hero{ padding: 48px 16px; }
+}
+
+@media (max-width: 480px){
+  .hero{ padding: 40px 12px; gap: 20px; }
+  .hero__title{ font-size: 32px; line-height: 40px; }
+  .hero__trust{ flex-wrap: wrap; justify-content: center; }
+  .hero__trust-text{ font-size: 13px; line-height: 20px; }
+  .hero__subline{ font-size: 13px; line-height: 20px; text-align: center; }
+  .hero__popular-title{ font-size: 14px; }
+  .chip{
+    font-size: 12px;
+    padding: 3px 10px;
+  }
+}
+

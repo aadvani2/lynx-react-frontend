@@ -1,0 +1,170 @@
+/* Container */
+.wrapper {
+  width: 100%;
+  border-radius: 16px;
+  background-color: #f3fbfd;
+  padding: 16px 24px 32px; /* Increased bottom padding for better spacing */
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Bottom track line (base/unfilled track) */
+.track {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px; /* Moved down slightly for better spacing from labels */
+  height: 4px;
+  border-radius: 999px;
+  background-color: #c8e9ef;
+  z-index: 0;
+}
+
+/* Filled progress track (overlays base track) */
+.activeTrack {
+  position: absolute;
+  left: 24px;
+  bottom: 24px; /* Same position as .track */
+  height: 4px;
+  border-radius: 999px;
+  background-color: #1e4d5a; /* Primary color for filled progress */
+  z-index: 1; /* Above base track but below dots */
+  transition: width 0.3s ease; /* Smooth animation when status changes */
+  width: calc((100% - 48px) * var(--progress-percent, 0) / 100);
+}
+
+/* Red track for cancelled requests */
+.activeTrackCancelled {
+  background-color: #dc3545; /* Red color for cancelled state */
+}
+
+/* Steps row */
+.steps {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  /* ✅ lets items wrap between 1200–1514px */
+  justify-content: space-between;
+  gap: 16px 24px;
+  /* row-gap / column-gap */
+  padding-bottom: 8px; /* Additional space between labels/dots and track line */
+}
+
+/* Single step */
+.step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 160px;
+  /* ✅ responsive width – works in mid widths */
+  min-width: 140px;
+}
+
+/* Dot + check icon wrapper */
+.iconWrapper {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  border: 2px solid #1e4d5a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  position: relative;
+  z-index: 2; /* Ensure dots appear above both track layers */
+}
+
+/* Inner dot (filled when done) */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background-color: #c8e9ef;
+}
+
+/* Text */
+.label {
+  font-size: 14px;
+  line-height: 20px;
+  color: #1e4d5a;
+  white-space: nowrap;
+}
+
+/* DONE state */
+.stepDone .iconWrapper {
+  background-color: #1e4d5a;
+  border-color: #1e4d5a;
+}
+
+.stepDone .dot {
+  background-color: #fff;
+}
+
+.stepDone .label {
+  font-weight: 600;
+}
+
+/* CANCELLED state */
+.stepCancelled .iconWrapper {
+  background-color: #dc3545; /* Red background */
+  border-color: #dc3545; /* Red border */
+}
+
+.stepCancelled .cancelIcon {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.stepCancelled .label {
+  color: #dc3545; /* Red text color */
+  font-weight: 600;
+}
+
+/* ---------- Responsive tweaks ---------- */
+
+/* Below 1200px: stack like checklist, remove long bottom line */
+@media (max-width: 1199.98px) {
+  .wrapper {
+    padding: 12px 16px;
+  }
+
+  .track {
+    display: none;
+    /* no long horizontal line on small screens */
+  }
+
+  .activeTrack {
+    display: none;
+    /* hide filled track on small screens to match base track behavior */
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .step {
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+
+  .label {
+    white-space: normal;
+    /* allow text to wrap on small screens */
+  }
+}
+
+/* Between 1200–1514px: slightly smaller text so it never breaks */
+@media (min-width: 1200px) and (max-width: 1514px) {
+  .label {
+    font-size: 13px;
+  }
+}

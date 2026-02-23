@@ -1,0 +1,50 @@
+/**
+ * RelatedBlogs styles
+ * Responsive styling for related blog cards
+ */
+
+/* Card image container with responsive height */
+.relatedBlogImage {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Standard blog card aspect ratio */
+  min-height: 200px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .relatedBlogImage {
+    aspect-ratio: 4 / 3;
+    min-height: 180px;
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .relatedBlogImage {
+    aspect-ratio: 1 / 1;
+    min-height: 200px;
+    max-height: 200px;
+  }
+}
+
+/* Fallback for browsers without aspect-ratio support */
+@supports not (aspect-ratio: 16 / 9) {
+  .relatedBlogImage {
+    height: 250px;
+  }
+  
+  @media (max-width: 768px) {
+    .relatedBlogImage {
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .relatedBlogImage {
+      height: 200px;
+    }
+  }
+}
+

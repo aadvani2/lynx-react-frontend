@@ -1,0 +1,149 @@
+.verificationCode {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  box-shadow: 0px 1px 3px rgba(39, 39, 39, 0.05);
+  border-radius: 16px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px;
+  box-sizing: border-box;
+  gap: 24px;
+  text-align: left;
+  color: #1e4d5a;
+  font-family: 'Bricolage Grotesque';
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.verificationCodeInner {
+  display: flex;
+  align-items: center;
+}
+.frameWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.frameParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 16px;
+  color: #706f6f;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.frameGroup {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.frameContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.provideThisVerificationCodeWrapper {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+.provideThisVerification {
+  flex: 1;
+  position: relative;
+  line-height: 28px;
+  font-weight: 500;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+.frameDiv {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  color: #1e4d5a;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+.b {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 130%;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+.iconcopy {
+  width: 16px;
+  position: relative;
+  max-height: 100%;
+  flex-shrink: 0;
+}
+
+.copyIconHover {
+  cursor: pointer;
+}
+.button {
+  height: 40px;
+  width: 156px;
+  border-radius: 16px;
+  background-color: #f7ef6f;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+.verificationCodeFrameWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 14px;
+}
+.iconinfoParent {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.iconinfo {
+  width: 16px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+}
+.howDoesThis {
+  flex: 1;
+  position: relative;
+  line-height: 20px;
+}

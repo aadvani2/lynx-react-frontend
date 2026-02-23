@@ -1,0 +1,74 @@
+/* DateTimeCard.module.css */
+
+.card {
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 1px 3px rgba(39, 39, 39, 0.05);
+  border-radius: 16px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px;
+  box-sizing: border-box;
+  gap: 16px;
+  text-align: left;
+}
+
+.dateHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dateTitle {
+  font-weight: 700;
+  font-size: 36px;
+  color: #1E4D5A;
+}
+
+.editButton {
+  border: 1px solid #1E4D5A;
+  border-radius: 24px;
+  background: #fff;
+  color: #1E4D5A;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 4px 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.editButton img {
+  width: 14px;
+  height: 14px;
+}
+
+.emergencyTitle {
+  font-weight: 700;
+  color: #1E4D5A;
+  font-size: 20px;
+}
+
+.dateInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.metaItem img {
+  width: 16px;
+  height: 16px;
+}

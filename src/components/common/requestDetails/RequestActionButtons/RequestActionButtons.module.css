@@ -1,0 +1,249 @@
+/* Main container */
+.actionButtonsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(30, 77, 90, 0.12);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Sender Badge */
+.senderBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #f3f4f6;
+  border-radius: 6px;
+  color: #4b5563;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
+
+.senderBadge i {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* Status Header */
+.statusHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 999px;
+  color: #856404;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.statusBadge i {
+  font-size: 16px;
+}
+
+/* Message text */
+.messageText {
+  margin: 0;
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.5;
+}
+
+/* Info Cards Container */
+.infoCardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 4px;
+}
+
+/* Info Card */
+.infoCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(30, 77, 90, 0.12);
+  border-radius: 10px;
+}
+
+.infoCardHighlight {
+  background: #f0f9ff;
+}
+
+.infoCardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  background: linear-gradient(135deg, #1e4d5a, #2a6b7c);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.infoCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.infoCardLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.infoCardValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e4d5a;
+  line-height: 1.4;
+}
+
+/* Note Container */
+.noteContainer {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  border-radius: 10px;
+}
+
+.noteIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  background: #f59e0b;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.noteContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.noteLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #92400e;
+}
+
+.noteText {
+  margin: 0;
+  font-size: 13px;
+  color: #78350f;
+  line-height: 1.4;
+}
+
+/* Button Group */
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+/* Base Button */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    transform 0.1s ease;
+  flex: 1;
+  min-width: 150px;
+  border-width: 2px;
+  border-style: solid;
+  box-sizing: border-box;
+}
+
+.button i {
+  font-size: 16px;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+/* Button Variants */
+.buttonOutlinePrimary {
+  background: #ffffff;
+  border-color: #1e4d5a;
+  color: #1e4d5a;
+}
+
+.buttonOutlinePrimary:hover {
+  background: linear-gradient(135deg, #1e4d5a, #2a6b7c);
+  color: #ffffff;
+  border-color: #1e4d5a;
+}
+
+.buttonOutlineSuccess {
+  background: linear-gradient(135deg, #28a745, #34ce57);
+  border-color: #28a745;
+  color: #ffffff;
+}
+
+.buttonOutlineSuccess:hover {
+  background: linear-gradient(135deg, #218838, #28a745);
+  border-color: #218838;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .actionButtonsContainer {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .infoCardsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+    min-width: 0;
+    flex: none;
+  }
+}

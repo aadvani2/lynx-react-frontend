@@ -1,0 +1,183 @@
+.frameWrapper {
+  width: 100%;
+  border-radius: 16px;
+  background-color: #fff;
+  display: flex;
+  align-items: stretch;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.bodyFrameParent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.bodyFrameWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.75rem;
+}
+
+.frameParent2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.iconcheckmarkGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bodyIconcheckmark {
+  width: 28px;
+  max-height: 100%;
+}
+
+.bodyRequestSent {
+  letter-spacing: -0.02em;
+  line-height: 130%;
+}
+
+.yourRequestHasBeenReceivedWrapper {
+  border-radius: 16px;
+  background-color: #c8e9ef;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 16px;
+  font-size: 14px;
+  font-family: Poppins;
+}
+
+.yourRequestHas {
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.request25101503864 {
+  font-size: 16px;
+  line-height: 26px;
+  color: #706f6f;
+}
+
+/* Divider line */
+.frameInner {
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #c8e9ef;
+  box-sizing: border-box;
+}
+
+/* Service details block */
+.frameWrapper2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.serviceDetailsParent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.frameParent3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  font-size: 16px;
+}
+
+.requestedServicesParent {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* mobile: stack label & value */
+  gap: 0.25rem;
+}
+
+.plumbing {
+  line-height: 26px;
+  color: #706f6f;
+}
+
+.a {
+  color: inherit;
+  white-space: pre-wrap;
+}
+
+.span {
+  text-decoration: underline;
+}
+
+/* Attachments section */
+.frameWrapper3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.rectangleParent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+.rectangleIcon {
+  height: 124px;
+  width: 124px;
+  border-radius: 16px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #c8e9ef;
+}
+
+.bodyButton {
+  line-height: 26px;
+}
+
+/* Larger screens: labels and values inline */
+@media (min-width: 768px) {
+  .frameWrapper {
+    padding: 2.5rem 3rem;
+  }
+
+  .bodyFrameWrapper {
+    font-size: 2.25rem;
+  }
+
+  .requestedServicesParent {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .requestedServicesParent > b {
+    margin-right: 1rem;
+  }
+
+  .rectangleIcon {
+    height: 120px;
+    width: 120px;
+  }
+}

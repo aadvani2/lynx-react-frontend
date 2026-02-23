@@ -1,0 +1,372 @@
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.sectionHeader .sectionTitle {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1E4D5A;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.sectionActions {
+  display: flex;
+  gap: 16px;
+}
+
+/* New pill buttons for action area */
+.pillBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border: 2px solid #1E4D5A;
+  border-radius: 9999px;
+  background: #fff;
+  color: #1E4D5A;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.pillBtn:hover {
+  opacity: .9;
+}
+
+.pillBtnIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;   /* remove outer circle: no fixed circular container */
+  height: 16px;
+  border: none;
+  border-radius: 0;
+  line-height: 1;
+}
+
+.pillBtnIcon img {
+  width: 12px;
+  height: 12px;
+  display: block;
+}
+
+/* Optional: refine icons */
+.pillBtnIconAdd {
+  background: transparent;
+}
+
+.pillBtnIconEdit {
+  background: transparent;
+}
+
+/* Service Address Cards */
+.addressList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.addressCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #D8E6EB;
+  border-radius: 16px;
+  padding: 16px 20px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.addressCard:hover {
+  border-color: #1E4D5A;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.addressCardActive {
+  border: 2px solid #1E4D5A;
+  background: #E9F8FB;
+}
+
+.addressIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #E3F4F7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.addressDetails {
+  flex: 1;
+  margin-left: 16px;
+}
+
+.addressType {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1E4D5A;
+}
+
+.addressText {
+  font-size: 14px;
+  color: #333;
+  margin-top: 4px;
+  word-break: break-word;
+}
+
+.addressActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 12px;
+}
+
+.addressActions span {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #1E4D5A;
+  transition: color 0.2s;
+}
+
+.addressActions :global(span.delete) {
+  color: #D9534F;
+}
+
+.addressActions span:hover {
+  text-decoration: underline;
+}
+
+.addressCheck {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #C0CED4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.addressCardActiveCheck {
+  background: #1E4D5A;
+  border-color: #1E4D5A;
+  color: #fff;
+}
+
+.addressCardActiveCheck::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sectionTitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .sectionActions {
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .pillBtn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .addressList {
+    gap: 12px;
+  }
+
+  .addressCard {
+    padding: 14px 16px;
+    border-radius: 12px;
+  }
+
+  .addressIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+
+  .addressDetails {
+    margin-left: 12px;
+  }
+
+  .addressType {
+    font-size: 13px;
+  }
+
+  .addressText {
+    font-size: 13px;
+    margin-top: 3px;
+  }
+
+  .addressActions {
+    gap: 10px;
+    margin-right: 8px;
+  }
+
+  .addressActions span {
+    font-size: 13px;
+  }
+
+  .addressCheck {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .sectionHeader {
+    gap: 12px;
+  }
+
+  .sectionActions {
+    gap: 10px;
+  }
+
+  .pillBtn {
+    padding: 8px 14px;
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .pillBtnIcon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pillBtnIcon img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .addressList {
+    gap: 10px;
+  }
+
+  .addressCard {
+    padding: 12px 14px;
+    flex-wrap: wrap;
+  }
+
+  .addressIcon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .addressDetails {
+    margin-left: 10px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .addressType {
+    font-size: 12px;
+  }
+
+  .addressText {
+    font-size: 12px;
+    margin-top: 2px;
+  }
+
+  .addressActions {
+    gap: 8px;
+    margin-right: 0;
+    margin-top: 8px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .addressActions span {
+    font-size: 12px;
+  }
+
+  .addressCheck {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .sectionHeader {
+    gap: 10px;
+  }
+
+  .sectionActions {
+    gap: 8px;
+  }
+
+  .pillBtn {
+    padding: 6px 12px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .addressCard {
+    padding: 10px 12px;
+  }
+
+  .addressIcon {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+  }
+
+  .addressDetails {
+    margin-left: 8px;
+  }
+
+  .addressType {
+    font-size: 11px;
+  }
+
+  .addressText {
+    font-size: 11px;
+  }
+
+  .addressActions span {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,302 @@
+.footer {
+  background-color: #fff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+  text-align: left;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  color: #1e4d5a;
+}
+
+/* Tablet and down – slightly reduced vertical padding */
+@media (max-width: 991.98px) {
+  .footer {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+/* Small phones – tighter padding so there’s less empty space */
+@media (max-width: 575.98px) {
+  .footer {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+}
+
+.footerInner {
+  margin: 0 auto;
+}
+
+/* New: control row gap and stacking */
+.footerRow {
+  row-gap: 40px;
+  /* vertical spacing between columns */
+}
+
+/* Slightly tighter on very small devices */
+@media (max-width: 575.98px) {
+  .footerRow {
+    row-gap: 28px;
+  }
+}
+
+.footerContent {
+  gap: 60px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 767.98px) {
+  .footerContent {
+    gap: 40px;
+  }
+}
+
+.brandColumn {
+  gap: 30px;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 132px;
+  height: 33px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logoIcon {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.logoText {
+  height: 79.39%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.footerTagline {
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+}
+
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.contactItem a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footerSocial {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.footerHeading {
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  margin-bottom: 11px;
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.footerListItem a {
+  color: inherit;
+  text-decoration: none;
+  line-height: 26px;
+}
+
+.footerColumn {
+  /* placeholder class for future tweaks if needed */
+}
+
+.downloadAppColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerApps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 11.69px;
+  color: #fff;
+  font-family: 'Product Sans', sans-serif;
+}
+
+.footerStoreBadge {
+  border-radius: 7.01px;
+  background-color: #000;
+  border: 1px solid #a6a6a6;
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  width: 200px;
+  height: 64px;
+  box-sizing: border-box;
+}
+
+.footerStoreLogo {
+  width: 24.6px;
+  height: 28.1px;
+  position: relative;
+  object-fit: contain;
+}
+
+.footerStoreTextContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.5px;
+}
+
+.footerStoreTextSmall {
+  text-transform: uppercase;
+  line-height: normal;
+}
+
+.footerStoreTextImg {
+  width: 86.5px;
+  height: 17.5px;
+  object-fit: contain;
+}
+
+.footerBottom {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.footerBottom::before {
+  content: "";
+  align-self: stretch;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #c8e9ef;
+  display: block;
+}
+
+.footerCopyright {
+  line-height: 20px;
+  margin: 0;
+}
+
+/* Additional styles for Apple App Store badge to match Figma */
+.footerStoreBadge[aria-label="Download on the App Store"] .footerStoreLogo {
+  width: 23.4px;
+  height: 28.1px;
+}
+
+.footerStoreBadge[aria-label="Download on the App Store"] .footerStoreTextSmall {
+  line-height: 10.52px;
+  font-weight: 500;
+  font-family: 'SF Compact Text', sans-serif;
+  white-space: nowrap;
+}
+
+.footerStoreBadge[aria-label="Download on the App Store"] .footerStoreTextLarge {
+  font-size: 21.04px;
+  letter-spacing: -0.55px;
+  line-height: 100%;
+  font-weight: 500;
+  font-family: 'SF Compact Display', sans-serif;
+}
+
+/* ===========================
+   MOBILE OPTIMIZATIONS
+   =========================== */
+
+@media (max-width: 767.98px) {
+  .footer {
+    text-align: center;
+  }
+
+  .brandColumn,
+  .footerColumn,
+  .downloadAppColumn {
+    align-items: center;
+  }
+
+  .footerLogo {
+    margin: 0 auto 16px;
+    justify-content: center;
+  }
+
+  .footerTagline {
+    max-width: 260px;
+  }
+
+  .footerContact,
+  .footerList,
+  .footerApps {
+    align-items: center;
+  }
+
+  .contactItem {
+    justify-content: center;
+  }
+
+  .footerSocial {
+    justify-content: center;
+  }
+
+  .footerStoreBadge {
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
+  }
+
+  .footerBottom {
+    margin-top: 28px;
+  }
+}
+
+/* Very small phones – slightly smaller headings so content feels denser */
+@media (max-width: 575.98px) {
+  .footerHeading {
+    font-size: 18px;
+  }
+
+  .footerList {
+    font-size: 15px;
+  }
+
+  .footerTagline {
+    font-size: 18px;
+  }
+}

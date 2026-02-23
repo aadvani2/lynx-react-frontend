@@ -1,0 +1,1 @@
+/* This component has been replaced with static HTML in ChangeTierContent.tsx. The file can be safely deleted. */

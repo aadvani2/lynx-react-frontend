@@ -1,0 +1,173 @@
+.booking-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.booking-confirmed-card {
+  flex: 1;
+  min-width: 480px;
+  max-width: 720px;
+  width: 100%;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0px 1px 3px rgba(39,39,39,0.05);
+  padding: 40px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Lock right service sidebar width to avoid CLS on refresh */
+.booking-service-sidebar {
+  flex: 0 0 420px;
+  max-width: 420px;
+  min-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.booking-confirmed-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.be-check {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #1E4D5A;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-confirmed-title {
+  font-weight: 700;
+  font-size: 34px;
+  color: #1E4D5A;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.request-status-pill{
+  display:inline-block;
+  background:#D6F2F6;
+  color:#1E4D5A;
+  font-weight:700;
+  font-size:14px;
+  padding:8px 16px;
+  border-radius:20px;
+  margin-bottom:8px;
+}
+
+.booking-confirmed-requestid {
+  color: #999;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.booking-confirmed-section-title {
+  font-weight: 700;
+  font-size: 26px;
+  color: #1E4D5A;
+  margin-bottom: 16px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.booking-confirmed-hr {
+  border: none;
+  border-top: 1px solid #C8E9EF;
+  margin: 0 0 16px 0;
+}
+
+.booking-confirmed-details-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: #1E4D5A;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.booking-confirmed-details-row b {
+  font-weight: 700;
+}
+
+.booking-confirmed-details-row .value {
+  font-weight: 400;
+  text-align: right;
+}
+
+.booking-confirmed-attachments-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #1E4D5A;
+  margin-bottom: 8px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.booking-confirmed-attachments-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.booking-confirmed-attachment-img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #eee;
+}
+
+.booking-confirmed-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.booking-confirmed-btn {
+  border: 2px solid #1E4D5A;
+  border-radius: 12px;
+  background: #fff;
+  color: #1E4D5A;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-family: "Bricolage Grotesque", sans-serif;
+  transition: background 0.2s, color 0.2s;
+}
+
+.booking-confirmed-btn:hover {
+  background: #f0f8fa;
+}
+
+.booking-confirmed-btn.cancel {
+  border: none;
+  background: #F36;
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .booking-main {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+    padding: 24px 8px;
+  }
+  .booking-confirmed-card {
+    max-width: 100%;
+    padding: 24px;
+  }
+}
+
+

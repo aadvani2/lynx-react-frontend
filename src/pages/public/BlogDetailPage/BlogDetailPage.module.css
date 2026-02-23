@@ -1,0 +1,49 @@
+/**
+ * BlogDetailPage styles
+ * Responsive styling for blog detail page
+ */
+
+/* Hero image container with responsive height */
+.blogHeroImage {
+  width: 100%;
+  aspect-ratio: 21 / 9; /* Wide hero aspect ratio */
+  min-height: 300px;
+  max-height: 600px;
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 768px) {
+  .blogHeroImage {
+    aspect-ratio: 16 / 9; /* Slightly less wide on mobile */
+    min-height: 250px;
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blogHeroImage {
+    aspect-ratio: 4 / 3; /* More square on small screens */
+    min-height: 200px;
+    max-height: 300px;
+  }
+}
+
+/* For browsers that don't support aspect-ratio */
+@supports not (aspect-ratio: 21 / 9) {
+  .blogHeroImage {
+    height: 500px;
+  }
+  
+  @media (max-width: 768px) {
+    .blogHeroImage {
+      height: 350px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blogHeroImage {
+      height: 250px;
+    }
+  }
+}
+

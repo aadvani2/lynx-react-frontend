@@ -1,0 +1,75 @@
+.miniSearchCard {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 1px 3px rgba(39,39,39,0.05);
+  border: 1px solid #ebebeb;
+  padding: 0 24px;
+  min-height: 68px;
+  min-width: 200px;
+  gap: 12px;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.miniSearchCard.disabled {
+  background: #f5f5f5;
+  box-shadow: none;
+  border: 1px solid #e0e0e0;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.miniIcon {
+  /* width: 24px; */
+  height: 24px;
+  margin-right: 8px;
+}
+
+.miniLabel {
+  color: #000;
+  font-weight: 500;
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .miniSearchCard {
+    width: 100%;
+    min-width: 0;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .miniSearchCard {
+    padding: 0 16px;
+    min-height: 60px;
+    gap: 10px;
+  }
+  .miniIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+  }
+  .miniLabel {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .miniSearchCard {
+    padding: 0 12px;
+    min-height: 56px;
+    gap: 8px;
+  }
+  .miniIcon {
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+  }
+  .miniLabel {
+    font-size: 13px;
+  }
+}

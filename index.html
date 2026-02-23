@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Lynx - Connect with Top-Rated Licensed Home Service Professionals | No
+    Lists, Just One Trusted Match
+  </title>
+  <!-- Design System Fonts - Optimized for Performance -->
+  <!-- Preconnect to Google Fonts domains for faster DNS resolution and connection -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Bricolage Grotesque: Display font for headings - LCP font, preload critical -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&display=swap"
+    rel="preload"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&display=swap" rel="stylesheet">
+  </noscript>
+  
+  <!-- Poppins: Body font for text - Reduced variants for performance -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" 
+    rel="preload"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  </noscript>
+  
+
+  <!-- Critical CSS: Inline minimal styles to prevent FOUC -->
+  <style>
+    /* Critical above-the-fold styles - prevents layout shift */
+    *{box-sizing:border-box}body{margin:0;line-height:normal;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;overflow-x:hidden;width:100%}img{max-width:100%;height:auto}.container{padding:0 24px}@media(max-width:900px){.container{padding:0 20px}}@media(max-width:600px){.container{padding:0 16px}}@media(max-width:480px){.container{padding:0 12px}}
+  </style>
+  
+  <!-- Suppress tracking prevention warnings (harmless browser security messages) -->
+  <script>
+    // Suppress tracking prevention console warnings - these are browser security features, not errors
+    const originalWarn = console.warn;
+    console.warn = function(...args) {
+      if (args[0] && typeof args[0] === 'string' && args[0].includes('Tracking Prevention')) {
+        return; // Suppress tracking prevention warnings
+      }
+      originalWarn.apply(console, args);
+    };
+  </script>
+  
+  <!-- Async CSS loader script - improves render blocking -->
+  <script>
+    /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+    (function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+    var loadCSS=function(href,before,media){var doc=w.document;var ss=doc.createElement("link");var ref;if(before){ref=before}else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1]}var sheets=doc.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";function ready(cb){if(doc.body){return cb()}setTimeout(function(){ready(cb)})}ready(function(){ref.parentNode.insertBefore(ss,before?ref:ref.nextSibling)});var onloadcssdefined=function(cb){var resolvedHref=ss.href;var i=sheets.length;while(i--){if(sheets[i].href===resolvedHref){return cb()}}setTimeout(function(){onloadcssdefined(cb)})};function onload(){ss.onload=null;ss.media=media||"all"}if(ss.addEventListener){ss.addEventListener("load",onload)}ss.onloadcssdefined=onloadcssdefined;onloadcssdefined(onload);return ss};w.loadCSS=loadCSS})(typeof global!=="undefined"?global:this);
+  </script>
+
+  <!-- Bootstrap CSS: Non-blocking load with preload -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"></noscript>
+
+  <!-- Large CSS files: Non-blocking load -->
+  <link rel="preload" href="/css/plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/plugins.css"></noscript>
+  
+  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+
+  <!-- Unicons (icon font, small) - Non-blocking load with error handling -->
+  <link 
+    rel="preload" 
+    href="https://cdn.jsdelivr.net/npm/@iconscout/unicons/css/unicons.css" 
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+    onerror="this.onerror=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons/css/unicons.css" />
+  </noscript>
+
+  <!-- REMOVED flatpickr CSS -->
+  <!-- REMOVED intl-tel-input CSS -->
+
+  <!-- 🔽 NON-CRITICAL TOOLING CSS: load as non-blocking -->
+
+  <!-- Cue.css - Load on demand when needed (not preloaded to avoid warning) -->
+  <!-- Cue.js will load the CSS when it initializes -->
+
+  <!-- Select2, Quill, Summernote CSS are now loaded on-demand where needed -->
+
+
+</head>
+
+<body class="">
+  <div id="root" class="content-wrapper"></div>
+  <script type="module" src="/src/main.tsx"></script>
+
+  <!-- Bootstrap JS - defer to avoid blocking first paint -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Select2 / Quill / Summernote / Twilio Chat / jQuery are now loaded on-demand in components -->
+
+  <!-- Non-critical scripts: Load after first paint to improve TBT -->
+  <script>
+    // Delay non-critical scripts until after first paint
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initNonCriticalScripts);
+    } else {
+      // Use requestIdleCallback or setTimeout to delay after paint
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(initNonCriticalScripts, { timeout: 2000 });
+      } else {
+        setTimeout(initNonCriticalScripts, 100);
+      }
+    }
+    
+    function initNonCriticalScripts() {
+      // Cue.js - animation library, not critical for first paint
+      var cueScript = document.createElement('script');
+      cueScript.src = 'https://unpkg.com/cue.css/cue.min.js';
+      cueScript.defer = true;
+      document.head.appendChild(cueScript);
+      
+      // Metricool tracker - analytics, load after paint
+      var metricoolScript = document.createElement('script');
+      metricoolScript.type = 'text/javascript';
+      metricoolScript.async = true;
+      metricoolScript.src = 'https://tracker.metricool.com/resources/be.js';
+      metricoolScript.onload = function() {
+        if (typeof beTracker !== 'undefined') {
+          beTracker.t({ hash: '8cd3b66f43dbc06507a9e3ac6465c14f' });
+        }
+      };
+      metricoolScript.onerror = function() {
+        if (window.location.hostname.includes('localhost') || window.location.hostname.includes('127.0.0.1')) {
+          console.warn('Metricool tracker failed to load (non-critical)');
+        }
+      };
+      document.head.appendChild(metricoolScript);
+    }
+  </script>
+</body>
+
+</html>

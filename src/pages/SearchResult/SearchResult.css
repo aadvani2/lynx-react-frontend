@@ -1,0 +1,309 @@
+.search-bar-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 1176px;
+  margin: 40px auto 24px auto;
+  justify-content: center;
+}
+
+.main-search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid #ebebeb;
+  box-shadow: 0px 1px 3px rgba(39,39,39,0.05);
+  padding: 0 16px;
+  min-height: 68px;
+  flex: 1 1 0;
+  max-width: 900px;
+  overflow: visible; /* allow calendar dropdown to be visible */
+}
+
+.search-col { display:flex; flex-direction:column; min-width:150px; flex:1 1 0; justify-content:center; }
+.location-col { min-width:90px; max-width:90px; flex:0 0 90px; margin:0; padding:0; align-items:center; }
+.location-col .search-label { text-align:center; width:100%; }
+.location-col .search-input { text-align:center; }
+.when-col { min-width:180px; flex:1 1 0; margin:0 0 0 16px; padding:0; position: relative; z-index: 1; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; }
+.when-col .search__group--when{ display:flex; flex-direction:column; align-items:flex-start; gap:6px; padding:0; margin:0; width:100%; }
+.when-col .search__label{ margin: 0; padding: 0; width:auto; }
+.when-col .when{ margin-top:2px; }
+
+.search-label { color:#000; font-weight:500; font-size:14px; font-family:'Bricolage Grotesque'; line-height:20px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.search-input { border:none; outline:none; color:#9A9A9A; font-weight:500; font-size:14px; font-family:'Bricolage Grotesque'; background:transparent; padding:0; margin:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.search-divider { height:44px; width:1px; background:#c8e9ef; margin:0; padding:0; flex:none; }
+
+.search-radio-row { display:flex; align-items:center; gap:16px; margin-top:2px; }
+.radio-label { display:flex; align-items:center; gap:4px; color:#1E4D5A; font-weight:500; font-size:14px; font-family:'Bricolage Grotesque'; cursor:pointer; }
+.radio-icon { width:16px; height:16px; }
+.radio-text { color:#1E4D5A; white-space:nowrap; }
+
+.search-btn { background:#F7EF6F; border:none; border-radius:16px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; }
+.search-btn img { width:16px; height:16px; }
+
+.mini-search-card { display:flex; align-items:center; background:#fff; border-radius:16px; box-shadow:0px 1px 3px rgba(39,39,39,0.05); border:1px solid #ebebeb; padding:0 24px; min-height:68px; min-width:220px; gap:12px; }
+.mini-icon { width:24px; height:24px; margin-right:8px; }
+.mini-label { color:#000; font-weight:500; font-family:'Bricolage Grotesque'; font-size:16px; line-height:20px; }
+.mini-input { border:none; outline:none; color:#9A9A9A; font-weight:500; font-family:'Bricolage Grotesque'; font-size:14px; background:transparent; padding:0; margin:0; }
+.body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f0f9fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.header-underline { width:100%; background:#ffffff; box-shadow:0 1px 2px rgba(0,0,0,0.04); border-bottom:2px solid #a855f7; }
+
+.body-inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-states-parent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.search-states {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #ebebeb;
+  padding: 0 16px;
+  gap: 32px;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 68px;
+}
+
+.what-do-you-need-help-with-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.frame-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pro-listing-parent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.pro-listing {
+  width: 100%;
+  max-width: 1400px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 1px 3px rgba(39, 39, 39, 0.05);
+  display: flex;
+  align-items: center;
+  padding: 32px;
+  gap: 36px;
+}
+
+
+/* Service Card List - Responsive Grid Layout */
+.service-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Small screens: 2-column grid with vertical cards */
+@media (min-width: 480px) {
+  .service-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Medium screens: 2-column grid with vertical cards */
+@media (min-width: 640px) {
+  .service-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Large tablets: 3-column grid with vertical cards */
+@media (min-width: 900px) {
+  .service-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Large screens: 3-column grid with vertical cards */
+@media (min-width: 1200px) {
+  .service-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Extra large screens (1400px+): 2-column grid with horizontal cards */
+@media (min-width: 1400px) {
+  .service-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+/* Load more */
+.load-more-container { display:flex; justify-content:center; width:100%; margin: 8px 0 48px; }
+.load-more-btn { background:#ffffff; border:2px solid #1E4D5A; color:#1E4D5A; border-radius:16px; padding:8px 32px; font-family:'Bricolage Grotesque'; font-weight:700; font-size:20px; cursor:pointer; box-shadow:none; }
+.load-more-btn:hover { background:#ffffff; }
+
+.pro-listing-child {
+  width: 138px;
+  height: 138px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.pro-listing-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.frame-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+@media (max-width: 1399px) {
+  .body-inner, .pro-listing, .search-states {
+    max-width: 98vw;
+    width: 98vw;
+  }
+  .service-list {
+    max-width: 98vw;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .search-states, .pro-listing {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+  }
+  .frame-div {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+
+/* Mobile/Tablet: Responsive search bar (no desktop changes) */
+@media (max-width: 1024px) {
+  /* Ensure content clears sticky header */
+  .body { padding-top: 84px; }
+  .search-bar-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 24px auto 16px auto;
+    padding: 0 12px;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .main-search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: #fff;
+    border-radius: 24px;
+    border: 1px solid #ebebeb;
+    box-shadow: 0px 1px 3px rgba(39,39,39,0.05);
+    padding: 20px 16px;
+    height: auto;
+    min-height: auto;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 100%;
+    gap: 6px;
+  }
+
+  .location-col { min-width: 100%; max-width: 100%; flex: 1 1 auto; align-items: flex-start; }
+  .location-col .search-label { text-align: left; }
+  .location-col .search-input { text-align: left; }
+
+  .search-divider { display: none; }
+
+  .when-col { margin: 0; width: 100%; }
+  .when-col .search__group--when{ display:flex; flex-direction: row; align-items: center; gap: 16px; padding: 0; margin: 0; width: 100%; flex-wrap: wrap; }
+  .when-col .when{ margin: 0; }
+
+  .search-btn {
+    width: 100%;
+    height: 56px;
+    border-radius: 14px;
+    margin-left: 0;
+  }
+
+  /* Service cards responsive layout for tablet */
+  .service-list {
+    padding: 0 12px;
+    gap: 16px;
+  }
+
+  /* Hide mini cards on tablet/mobile to match compact design */
+  .mini-cards-container { display: none; }
+}
+
+/* Mobile: Responsive grid layout */
+@media (max-width: 479px) {
+  .service-list {
+    padding: 0 16px;
+    gap: 16px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Slightly smaller offset on small phones */
+  .body { padding-top: 72px; }
+}
+

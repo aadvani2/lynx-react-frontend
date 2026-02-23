@@ -1,0 +1,204 @@
+/* Why Choose Section - Gradient Background */
+.why-choose {
+  width: 100%;
+  background: linear-gradient(115deg, #1b4a58 15.7%, #2b6f79 54.8%, #6baeb8 100%);
+  padding: 96px 0;
+}
+
+.why-choose__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 132px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  box-sizing: border-box;
+}
+
+/* Section Title */
+.why-choose__title {
+  font-family: "Bricolage Grotesque", var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: -0.72px;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+}
+
+/* Card Grid - 3 columns */
+.why-choose__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 24px;
+  row-gap: 24px;
+  align-items: stretch;
+}
+
+/* Base Card Styles (White Cards) */
+.why-choose-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 1px 3px rgba(39, 39, 39, 0.05);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  min-height: 152px;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  transition: all var(--transition-base);
+}
+
+.why-choose-card:hover {
+  box-shadow: 0px 4px 10px rgba(39, 39, 39, 0.08);
+  transform: translateY(-2px);
+}
+
+/* CTA Card (Light Blue Background) */
+.why-choose-card--cta {
+  background-color: #c8e9ef;
+  justify-content: space-between;
+}
+
+/* Card Title */
+.why-choose-card__title {
+  font-family: "Bricolage Grotesque", var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: -0.4px;
+  color: #1E4D5A;
+  margin: 0;
+}
+
+/* Card Description */
+.why-choose-card__description {
+  font-family: "Bricolage Grotesque", var(--font-display);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 150%;
+  color: rgba(30, 77, 90, 0.9);
+  margin: 0;
+}
+
+/* CTA Button (Yellow Pill) */
+.why-choose-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  background-color: #f7ef6f;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+  font-family: "Bricolage Grotesque", var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: #1E4D5A;
+  margin-top: 8px;
+}
+
+.why-choose-cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.why-choose-cta-button:active {
+  transform: translateY(0);
+}
+
+.why-choose-cta-button:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+}
+
+/* Responsive: 3 -> 2 columns on tablets */
+@media (max-width: 1200px) {
+  .why-choose__container {
+    padding: 0 96px;
+  }
+
+  .why-choose__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .why-choose {
+    padding: 80px 0;
+  }
+
+  .why-choose__container {
+    padding: 0 64px;
+  }
+}
+
+@media (max-width: 900px) {
+  .why-choose {
+    padding: 64px 0;
+  }
+
+  .why-choose__container {
+    padding: 0 40px;
+  }
+
+  .why-choose__grid {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .why-choose__container {
+    padding: 0 24px;
+    gap: 32px;
+  }
+
+  .why-choose-card {
+    padding: 20px;
+  }
+
+  .why-choose-card__title {
+    font-size: 20px;
+  }
+
+  .why-choose-card__description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .why-choose {
+    padding: 48px 0;
+  }
+
+  .why-choose__container {
+    padding: 0 16px;
+  }
+}
+
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .why-choose-card,
+  .why-choose-cta-button {
+    transition: none;
+  }
+  
+  .why-choose-card:hover,
+  .why-choose-cta-button:hover {
+    transform: none;
+  }
+}
+
+

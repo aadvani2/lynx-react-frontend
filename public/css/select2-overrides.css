@@ -1,0 +1,24 @@
+/* Select2 alignment overrides */
+.select2-container .select2-selection--multiple {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	min-height: 42px;
+	display: flex;
+	align-items: center;
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+	margin: 0;
+	padding: 0 8px;
+	gap: 6px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.select2-container .select2-selection--multiple .select2-search--inline .select2-search__field {
+	margin-top: 0;
+	line-height: 24px;
+	height: 24px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+	margin-top: 0;
+} 

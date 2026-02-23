@@ -1,0 +1,394 @@
+.infoSection {
+  margin-bottom: 40px;
+}
+
+.infoSection:last-of-type {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1E4D5A;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.sectionSubtitle {
+  font-size: 16px;
+  color: #1E4D5A;
+  margin-bottom: 24px;
+}
+
+.formGroup {
+  margin-bottom: 24px;
+  position: relative; /* allow floating label */
+}
+
+/* Default label style for regular groups */
+.formGroup label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1E4D5A;
+  margin-bottom: 8px;
+}
+
+/* Floating label for groups marked as floating (label sits inside the input) */
+.formGroupFloating {
+  position: relative;
+}
+
+.formGroupFloating label {
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6B8791;
+  margin: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.jobDescriptionTextarea {
+  width: 100%;
+  padding: 28px 16px 16px 16px; /* extra top space for floating label */
+  border: 1px solid #EBEBEB;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: vertical;
+  min-height: 120px;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.jobDescriptionTextarea:focus {
+  outline: none;
+  border-color: #1E4D5A;
+}
+
+.uploadTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1E4D5A;
+  margin-bottom: 8px;
+}
+
+.uploadOptional {
+  color: #999;
+  font-weight: 400;
+}
+
+.uploadSubtitle {
+  font-size: 14px;
+  color: #1E4D5A;
+  margin-bottom: 16px;
+}
+
+.uploadBox {
+  border: 2px dashed #C8E9EF;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+}
+
+.uploadBox:hover {
+  border-color: #1E4D5A;
+}
+
+.uploadContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.uploadMainText {
+  margin: 0;
+  color: #1E4D5A;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.uploadHint {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+.browseBtn {
+  display: inline-block;
+  padding: 6px 28px;
+  border: 2px solid #1E4D5A;
+  border-radius: 24px;
+  background: #fff;
+  color: #1E4D5A;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 8px 0;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.browseBtn:hover {
+  background: #1E4D5A;
+  color: #fff;
+}
+
+.uploadLimit {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+.uploadedFilesPreview {
+  margin-top: 16px;
+}
+
+.previewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.previewItem {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f5f5;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.previewItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.previewItemDoc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #E8F4F8;
+}
+
+.previewDoc {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1E4D5A;
+  margin-bottom: 8px;
+}
+
+.previewName {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 10px;
+  padding: 4px 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.previewItemDocName {
+  position: relative;
+  background: transparent;
+  color: #1E4D5A;
+  font-size: 10px;
+  padding: 4px;
+  text-align: center;
+}
+
+.removeBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sectionTitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .sectionSubtitle {
+    font-size: 14px;
+  }
+
+  .formGroup {
+    margin-bottom: 20px;
+  }
+
+  .jobDescriptionTextarea {
+    padding: 24px 14px 14px 14px;
+    font-size: 15px;
+    min-height: 100px;
+  }
+
+  .uploadBox {
+    padding: 20px;
+  }
+
+  .uploadMainText {
+    font-size: 14px;
+  }
+
+  .uploadHint {
+    font-size: 12px;
+  }
+
+  .browseBtn {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+
+  .previewGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .sectionSubtitle {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .formGroup {
+    margin-bottom: 18px;
+  }
+
+  .formGroupFloating label {
+    font-size: 13px;
+    top: 5px;
+    left: 14px;
+  }
+
+  .jobDescriptionTextarea {
+    padding: 22px 12px 12px 12px;
+    font-size: 14px;
+    min-height: 90px;
+    border-radius: 12px;
+  }
+
+  .uploadTitle {
+    font-size: 16px;
+  }
+
+  .uploadSubtitle {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .uploadBox {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .uploadContent {
+    gap: 10px;
+  }
+
+  .uploadMainText {
+    font-size: 13px;
+  }
+
+  .uploadHint {
+    font-size: 11px;
+  }
+
+  .browseBtn {
+    padding: 8px 20px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .previewGrid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .sectionSubtitle {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .formGroup {
+    margin-bottom: 16px;
+  }
+
+  .formGroupFloating label {
+    font-size: 12px;
+    top: 4px;
+    left: 12px;
+  }
+
+  .jobDescriptionTextarea {
+    padding: 20px 10px 10px 10px;
+    font-size: 13px;
+    min-height: 80px;
+  }
+
+  .uploadBox {
+    padding: 12px;
+  }
+
+  .uploadMainText {
+    font-size: 12px;
+  }
+
+  .uploadHint {
+    font-size: 10px;
+  }
+
+  .browseBtn {
+    padding: 6px 16px;
+    font-size: 13px;
+  }
+
+  .previewGrid {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 8px;
+  }
+}
+

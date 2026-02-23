@@ -1,0 +1,188 @@
+/* Close button custom styling */
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 0;
+  line-height: 0;
+}
+
+.closeButton::before {
+  background: rgba(0, 0, 0, 0.08);
+  font-family: "Unicons";
+  font-size: 1.05rem;
+  content: "×";
+  width: 1.8rem;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  border-radius: 100%;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  transition: background 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+.closeButton:hover::before {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Modal Animation */
+.modalFadeShow {
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.modalFadeClosing {
+  animation: modalFadeOut 0.3s ease-in;
+}
+
+.modalDialog {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+.modalDialogClosing {
+  animation: modalSlideOut 0.3s ease-in;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-50px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideOut {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-50px) scale(0.95);
+    opacity: 0;
+  }
+}
+
+/* Backdrop Animation */
+.backdropFadeShow {
+  animation: backdropFadeIn 0.3s ease-out;
+}
+
+.backdropFadeClosing {
+  animation: backdropFadeOut 0.3s ease-in;
+}
+
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes backdropFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Schedule box custom styling */
+.scheduleBox {
+  background-color: #f8f9fa;
+}
+
+/* Modal backdrop */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
+
+/* Modal container */
+.modalContainer {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1050;
+  overflow: auto;
+}
+
+/* Modal content custom styling */
+.modalContent {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+/* Modal header */
+.modalHeader {
+  padding: 0.5rem 1rem;
+}
+
+/* Ensure Flatpickr calendar is visible above modal */
+/* Using :global to target Flatpickr's global classes */
+:global(.flatpickr-calendar) {
+  z-index: 1060 !important; /* Above modal z-index (1050) */
+  position: fixed !important;
+}
+
+:global(.flatpickr-calendar.open) {
+  z-index: 1060 !important;
+}
+
+/* Ensure modal and its containers don't clip Flatpickr */
+:global(.modal) {
+  overflow: visible !important;
+}
+
+:global(.modal-content) {
+  overflow: visible !important;
+}
+
+:global(.modal-body) {
+  overflow: visible !important;
+}
+

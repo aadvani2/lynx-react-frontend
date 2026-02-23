@@ -1,0 +1,167 @@
+.infoSection {
+  margin-bottom: 40px;
+}
+
+.infoSection:last-of-type {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1E4D5A;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.formGroup {
+  margin-bottom: 24px;
+  position: relative; /* allow floating label */
+}
+
+/* Default label style for regular groups */
+.formGroup label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1E4D5A;
+  margin-bottom: 8px;
+}
+
+/* Floating label for groups marked as floating (label sits inside the input) */
+.formGroupFloating {
+  position: relative;
+}
+
+.formGroupFloating label {
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6B8791;
+  margin: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.inputWithCheckmark {
+  position: relative;
+}
+
+.inputWithCheckmark input {
+  width: 100%;
+  padding: 28px 44px 16px 16px; /* extra top space for floating label */
+  border: none;                  /* remove hard border */
+  border-radius: 16px;           /* rounded like booking inputs */
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 0 0 1px rgba(16, 24, 40, 0.06);
+  font-size: 16px;
+  font-family: var(--font-body); /* Use body font for input text */
+  color: #000;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s ease;
+}
+
+.inputWithCheckmark input:focus {
+  outline: none;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 0 0 2px #1E4D5A;
+}
+
+.readOnlyInput {
+  background-color: #FFFFFF;
+}
+
+.checkmarkIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkmarkIcon img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sectionTitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .formGroup {
+    margin-bottom: 20px;
+  }
+
+  .inputWithCheckmark input {
+    padding: 24px 40px 14px 14px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .formGroup {
+    margin-bottom: 18px;
+  }
+
+  .formGroupFloating label {
+    font-size: 13px;
+    top: 5px;
+    left: 14px;
+  }
+
+  .inputWithCheckmark input {
+    padding: 22px 38px 12px 14px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  .checkmarkIcon {
+    right: 10px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .checkmarkIcon img {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .formGroup {
+    margin-bottom: 16px;
+  }
+
+  .formGroupFloating label {
+    font-size: 12px;
+    top: 4px;
+    left: 12px;
+  }
+
+  .inputWithCheckmark input {
+    padding: 20px 36px 10px 12px;
+    font-size: 13px;
+  }
+}
+

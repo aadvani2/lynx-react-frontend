@@ -1,0 +1,215 @@
+.body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #f0f9fb;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem 0; /* container handles horizontal padding */
+  box-sizing: border-box;
+  gap: 2rem;
+  text-align: left;
+  font-size: 16px;
+  color: #1e4d5a;
+  font-family: "Bricolage Grotesque";
+}
+
+/* Top bar wrapper */
+.buttonParent {
+  width: 100%;
+}
+
+/* Back button */
+.button {
+  border-radius: 16px;
+  background-color: #fff;
+  border: 2px solid #1e4d5a;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  gap: 8px;
+}
+
+.backButtonHover {
+  cursor: pointer;
+}
+
+.iconarrowLeft {
+  width: 14px;
+  max-height: 100%;
+}
+
+.bodyButton {
+  line-height: 26px;
+}
+
+/* Main row */
+.frameContainer {
+  width: 100%;
+  font-size: 24px;
+}
+
+/* Left column inner content */
+.frameDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+/* Shared bottom button layout */
+.buttonGroup {
+  display: flex;
+  flex-direction: column; /* stacked by default */
+  align-items: stretch;
+  gap: 0.75rem;
+  font-size: 20px;
+}
+
+/* Variants for groups */
+.buttonGroupTop {
+  display: none; /* only ≥1800px */
+}
+
+.buttonGroupBottom {
+  margin-top: 1.5rem; /* used for <1800px */
+}
+
+/* Buttons */
+.button2,
+.button4 {
+  height: 48px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  width: 100%; /* full width in stacked mode */
+}
+
+/* Back to Requests */
+.button2 {
+  background-color: #fff;
+  border: 2px solid #1e4d5a;
+  color: #1e4d5a;
+}
+
+.button2:hover {
+  background-color: #1e4d5a;
+  color: #fff;
+}
+
+/* Cancel Request */
+.button4 {
+  background-color: #f37373;
+  border: none;
+  gap: 8px;
+  color: #fff;
+}
+
+.button4:hover {
+  background-color: #e06060;
+  cursor: pointer;
+}
+
+.bodyRequestSent {
+  letter-spacing: -0.02em;
+  line-height: 130%;
+}
+
+/* Right column stack of cards */
+.bookingServiceInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 1rem;
+  /* font-size: 1.5rem; */
+}
+
+/* Provider placement helpers */
+.providerTop {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.providerRightOnly {
+  width: 100%;
+}
+
+/* Tablet+ tweaks */
+@media (min-width: 768px) {
+  .body {
+    padding: 3rem 0;
+    gap: 2.5rem;
+  }
+
+  .buttonGroup {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .button2,
+  .button4 {
+    width: auto;
+    min-width: 180px;
+  }
+}
+
+/* Back button & top bar behaviour under 1200px */
+@media (max-width: 1199.98px) {
+  .buttonParent {
+    display: flex;
+    flex-direction: column !important;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.9rem;
+    border-width: 2px;
+  }
+}
+
+/* 8/4 layout & top/bottom variants above 1800px */
+@media (min-width: 1800px) {
+  .mainColLeft {
+    flex: 0 0 66.6667%;
+    max-width: 66.6667%;
+  }
+
+  .mainColRight {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+
+  .providerTop {
+    display: none;
+  }
+
+  .providerRightOnly {
+    display: block;
+  }
+
+  .buttonGroupTop {
+    display: flex;
+  }
+
+  .buttonGroupBottom {
+    display: none;
+  }
+}
+
+/* Hide right-column provider when <1800px */
+@media (max-width: 1799.98px) {
+  .providerRightOnly {
+    display: none;
+  }
+}

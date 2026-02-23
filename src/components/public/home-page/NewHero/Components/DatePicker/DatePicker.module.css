@@ -1,0 +1,183 @@
+.datePickerSection {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.dateHeader {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.title {
+  position: relative;
+  line-height: 20px;
+  color: #1e4d5a;
+  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Month Navigation */
+.monthNav {
+  width: 153px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.month {
+  position: relative;
+  line-height: 20px;
+  color: #1e4d5a;
+  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.navBtn {
+  height: 8px;
+  width: 5px;
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.navBtn:hover {
+  opacity: 0.7;
+}
+
+/* Calendar Grid */
+.calendar {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weekdays {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 11.5px;
+  margin-bottom: 4px;
+}
+
+.weekday {
+  height: 22px;
+  width: 32px;
+  position: relative;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #1e4d5a;
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.week {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 11.5px;
+}
+
+.dayCell {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dayCellOtherMonth {
+  color: #999;
+}
+
+.dayCellSelected {
+  /* Additional styles if needed */
+}
+
+.dayBg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.dayBgToday {
+  background-color: #e0f2f7;
+}
+
+.dayBgSelected {
+  background-color: #1e4d5a;
+}
+
+.dayText {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 9px);
+  line-height: 20px;
+  font-weight: 500;
+  color: #1e4d5a;
+  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  font-size: 14px;
+}
+
+.dayTextSelected {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .dateHeader {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .monthNav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .weekdays,
+  .week {
+    gap: 8px;
+  }
+
+  .weekday,
+  .dayCell {
+    width: 30px;
+    height: 30px;
+  }
+}
+

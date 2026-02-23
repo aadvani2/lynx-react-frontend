@@ -1,0 +1,103 @@
+.help {
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(39, 39, 39, 0.05);
+  border-radius: 16px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
+  gap: 1rem;
+  font-size: 18px;
+}
+
+/* Title */
+.needHelpWeve {
+  line-height: 28px;
+}
+
+.requestAcceptedWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.frameWrapper4 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Contact block wrapper */
+.frameParent4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* mobile: stack */
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+  font-size: 16px;
+  color: #706f6f;
+}
+
+/* Column that contains phone + email */
+.frameParent7 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+/* Each row (phone / email) */
+.frameWrapper7 {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.iconcalendarParent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.iconcalendar {
+  width: 16px;
+  max-height: 100%;
+}
+
+.bodyButton {
+  line-height: 26px;
+}
+
+/* Email link */
+.helloconnectwithlynxcom {
+  text-decoration: underline;
+  line-height: 26px;
+  color: inherit;
+}
+
+/* Hidden legacy button */
+.button7 {
+  height: 40px;
+  width: 156px;
+  border-radius: 16px;
+  background-color: #f7ef6f;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* Tablet+ – layout tweaks if needed later */
+@media (min-width: 768px) {
+  .help {
+    padding: 2rem;
+  }
+}
